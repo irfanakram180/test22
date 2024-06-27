@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation and Footer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.announcement-bar {
+  background-color: #c7c2f3;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: blue;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+ 
+}
+
+.navbar {
+  display: flex;
+border-bottom: solid blue;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  
+  
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Add this line */
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute; /* Add this line */
+  right: 50px; /* Add this line to position the toggle on the right */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-brand {
+      margin-bottom: 10px;
+  }
+
+  .navbar-toggle {
+      display: flex;
+  }
+
+  .navbar-menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      background-color: #000;
+  }
+
+  .navbar-menu.active {
+      display: flex;
+  }
+
+  .navbar-menu li {
+      width: 100%;
+      text-align: right;
+      padding: 10px 20px;
+  }
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.brand-line {
+  border: none;
+  border-top: 2px solid blue;
+  margin: 0 20px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-brand {
+      margin-bottom: 10px;
+  }
+
+  .navbar-toggle {
+      display: flex;
+  }
+
+  .navbar-menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      background-color: #000;
+  }
+
+  .navbar-menu.active {
+      display: flex;
+  }
+
+  .navbar-menu li {
+      width: 100%;
+      text-align: left;
+      padding: 10px 20px;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section input,
+.footer-section button {
+  margin: 5px 0;
+}
+
+.payment-icons img {
+  width: 30px;
+  margin: 5px;
+}
+
+.footer-line {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 20px 0 0 0;
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      text-align: center;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.welcome-section, .men-section {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: justify;
+}
+
+.men-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.men-image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.men-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000;
+margin-top: 35px;
+}
+
+.men-text {
+  flex: 2;
+}
+
+@media (max-width: 768px) {
+  .welcome-section, .men-section {
+      width: 90%;
+  }
+
+  .men-section {
+      flex-direction: column;
+  }
+
+  .men-image {
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+.slides {
+  display: flex;
+ 
+}
+.slide {
+  min-width: 100%;
+  box-shadow: inset 0 0 5px rgba(236, 129, 129, 0.5);
+}
+.slide img {
+  width: 100%;
+
+}
+.nav-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+.nav-button {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 5%;
+  background-color: #9d97d3;
+  cursor: pointer;color: red;
+  padding-top: 10px;
+}
+.nav-button.active {
+  background-color: black;
+  color: white;
+}
+
+
+</style>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="announcement-bar">
+            The Hand-Made Suiting company. Wear comfortable clothing.
+        </div>
+        <nav class="navbar">
+            <div class="navbar-brand">The Hand-Made</div>
+            <hr class="brand-line">
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Men Shirts</a></li>
+                <li><a href="#">Men Pants</a></li>
+                <li><a href="#">Men Coats</a></li>
+                <li><a href="#">Order Booking</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <main>
+      <div class="container">
+        <div class="welcome-section">
+            <h2>WELCOME</h2>
+            <p>We make every-day clothing to fit your unique body measurements, in a re-imagined manufacturing cycle that preserves age-old crafts, uses natural fabrics and empowers artisans economically. Our clothes are made by tailors who practice their ancient crafts in their own individual workshops. We do not work with garment factories. Each article of clothing is made entirely by hand, every detail pored over and perfected. Our clothes are designed to have a circular lifecycle and last a very long time. We provide you with free lifetime repairs. Since we start making your clothes once you order them, we hold no inventory and waste nothing. Our clothes are the antithesis of disposable, fast fashion.</p>
+        </div>
+        <div class="men-section">
+            <div class="men-image">
+                <img src="https://img.freepik.com/premium-photo/tailor-takes-measurements-from-business-suit-handmade-work-tailoring-workshop_84738-6350.jpg" alt="Man in clothing">
+            </div>
+            <div class="men-text">
+                <h2>MEN</h2>
+                <p>Clothes for even-tempered, unassuming men. Our clothes are inspired by a certain sense of classicism and, perhaps, with a hint of mischief. If you are the kind of person who finds it difficult to let go of a worn-out shirt or an old pair of pants, you will find a lot to interest you here. Everything is made entirely by hand to last a long time by artisans who take pride in the objects they make, infusing part of themselves into the clothes.</p>
+            </div>
+        </div>
+    </div>
+    </main>
+    <br>
+    <br>
+    <div class="slider-container">
+      <div class="slides">
+          <div class="slide"><img src="https://img.freepik.com/premium-photo/tailor-measuring-fabric-custommade-suit_731930-183230.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="https://img.freepik.com/premium-photo/tailor-measuring-fabric-custommade-suit_731930-176051.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="https://media.istockphoto.com/id/1495604325/photo/men-fashion-designer-is-drawing-cloth-fabric-with-soap-and-miter-focus-on-foreground-close-up.webp?b=1&s=170667a&w=0&k=20&c=vzijmrsSvCFd-yNTPBtOqPKjPOI3YDeyzb3ghqOCPaw=" alt="Slide 3"></div>
+      </div>
+      <div class="nav-buttons">
+          <span class="nav-button" onclick="goToSlide(0)">1</span>
+          <span class="nav-button" onclick="goToSlide(1)">2</span>
+          <span class="nav-button" onclick="goToSlide(2)">3</span>
+      </div>
+  </div>
+<hr>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>FOLLOW US ON</h4>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>LinkedIn</p>
+                <p>YouTube</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>LEGAL INFORMATION</h4>
+                <p>Terms & Conditions</p>
+                <p>GDPR Compliance</p>
+                <p>Privacy Policy</p>
+                <p>Cookie Policy</p>
+                <p>Gender Equality Policy</p>
+            </div>
+            
+            <div class="footer-section">
+              <h4>NEWSLETTER</h4>
+              <p>Subscribe to get notified about product launches, special offers, and company news.</p>
+              <input id="email" style="height: 30px;" type="email" placeholder="Enter your email address">
+              <button onclick="subscribe()" style="background-color: #000; border:none;color: white; height: 30px;">SUBSCRIBE</button>
+          </div>
+          <hr> 
+            <div class="footer-section">
+                <h4>CUSTOMER SERVICE</h4>
+                <p>Boutiques</p>
+                <br> <br> 
+                <div class="payment-icons">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjbDxIOzLXSBk8M4DH4OpNy42696s1A2d3tg&s" alt="AMEX">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-apple-pay-1-534001.png?f=webp" alt="Apple Pay">
+                    <img src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/436/Google_Pay_GPay_Logo-512.png" alt="Google Pay">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB4riVslIQW2n3UPr3v1I1gfU2n9XlJv7MHQ&s" alt="MasterCard">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_oFhQfT-pmj5y5JI9rPDRB9tQTbpzEQG0ug&s" alt="UnionPay">
+                    <img src="https://cdn4.iconfinder.com/data/icons/payment-method/160/payment_method_card_visa-512.png" alt="Visa">
+                </div>
+            </div>
+        </div>
+        <hr class="footer-line">
+        <p style="text-align: center; color: blue;">Copyright 2024 The Hand-Made Clothing</p>
+    </footer>
+<script>
+  document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.querySelector('.navbar-menu').classList.toggle('active');
+});
+
+</script>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const navButtons = document.querySelectorAll('.nav-button');
+
+  function showSlide(index) {
+      const slidesContainer = document.querySelector('.slides');
+      slidesContainer.style.transform = 'translateX(' + (-index * 100) + '%)';
+      updateNavButtons(index);
+  }
+
+  function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+  }
+
+  function goToSlide(index) {
+      currentSlide = index;
+      showSlide(index);
+  }
+
+  function updateNavButtons(index) {
+      navButtons.forEach((button, i) => {
+          button.classList.toggle('active', i === index);
+      });
+  }
+
+  setInterval(nextSlide, 3000);
+
+  // Initialize the first slide
+  showSlide(0);
+</script>
+</body>
+</html>
